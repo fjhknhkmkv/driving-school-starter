@@ -606,14 +606,78 @@ const doForgotPassword = async () => {
                 </motion.div>
               </section>
 
-              {/* Contact / CTA */}
-              <section className="py-12 text-center">
-                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-                  <h2 className="text-2xl text-[#45b1cb] font-bold mb-3">Ready to start?</h2>
-                  <p className="mb-4 text-gray-600">Book your first lesson or contact us for more information.</p>
-                  <Link to="/auth" className="inline-block bg-[#45b1cb] text-black px-5 py-3 rounded-lg font-semibold hover:brightness-95 transition">Login / Register</Link>
-                </motion.div>
-              </section>
+              
+{/* Contact / CTA */}
+<section className="py-12 px-6">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="max-w-4xl mx-auto bg-black text-white rounded-2xl shadow-xl p-8 md:p-12 text-center"
+  >
+    <h2 className="text-3xl font-bold text-[#45b1cb] mb-4">
+      Ready to get on the road?
+    </h2>
+
+    <p className="text-gray-300 mb-8">
+      Book your driving lesson or contact us today.
+      We're here to help you become a safe and confident driver.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+      {/* Phone */}
+      <a
+        href="tel:+61481196311"
+        className="p-5 rounded-xl bg-gray-900 hover:bg-gray-800 transition border border-gray-700"
+      >
+        <div className="text-3xl mb-3">📞</div>
+        <h3 className="font-semibold text-[#45b1cb] mb-2">
+          Call Us
+        </h3>
+        <p className="text-white">0481 196 311</p>
+      </a>
+
+      {/* Email */}
+      <a
+        href="mailto:dryauto777@gmail.com"
+        className="p-5 rounded-xl bg-gray-900 hover:bg-gray-800 transition border border-gray-700"
+      >
+        <div className="text-3xl mb-3">✉️</div>
+        <h3 className="font-semibold text-[#45b1cb] mb-2">
+          Email Us
+        </h3>
+        <p className="text-sm text-white break-all">
+          dryauto777@gmail.com
+        </p>
+      </a>
+
+      {/* Service Area */}
+      <div className="p-5 rounded-xl bg-gray-900 border border-gray-700">
+        <div className="text-3xl mb-3">📍</div>
+        <h3 className="font-semibold text-[#45b1cb] mb-2">
+          Service Area
+        </h3>
+        <p className="text-white">Darwin, NT</p>
+      </div>
+
+    </div>
+
+    <Link
+      to="/auth"
+      className="inline-block bg-[#45b1cb] text-black px-8 py-3 rounded-lg font-bold hover:brightness-110 transition"
+    >
+      Book a Lesson / Login
+    </Link>
+
+    <p className="text-gray-400 text-sm mt-6">
+      D R Y Driving School | Darwin, Northern Territory
+    </p>
+
+  </motion.div>
+</section>
+
             </div>
           } />
 
